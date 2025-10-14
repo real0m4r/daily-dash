@@ -1,0 +1,12 @@
+{% extends 'daily/layout.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'daily/feedback.css' %}">
+{% endblock head %}
+{% block body %}
+<div style="max-width:720px;margin:60px auto;text-align:center; margin-bottom: 50%;">
+  <h2>Thanks!</h2>
+  <p>Your feedback has been saved. Only site admins can view feedback entries.</p>
+  <a href="{% url 'index' %}">Return home</a>
+</div>
+{% endblock %}

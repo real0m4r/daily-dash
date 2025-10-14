@@ -1,0 +1,20 @@
+{% extends 'daily/layout.html'%}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'daily/weather.css' %}">
+{% endblock head %}
+{% block body %}
+    <div class="container">
+        <h1>Weather</h1>
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Enter location">
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="info">
+            <div id="weatherInfo"></div>
+            <div class="windSpeed"></div>
+            <div class="humidity"></div>
+        </div>
+    </div>
+    <script src="{% static 'daily/weather.js' %}"></script>
+{% endblock body %}

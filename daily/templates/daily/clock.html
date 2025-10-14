@@ -1,0 +1,20 @@
+{% extends 'daily/layout.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'daily/clock.css' %}">
+{% endblock head %}
+{% block body %}
+            <div class="clock-container">
+            <h1 style="color: black;">World Clock</h1>
+            <p style="color: black;">Click on a desired timezone after searching, don't press enter!</p>
+            <div style="opacity: 1;" class="input-group">
+            <div style="opacity: 1;" class="input-wrapper">
+            <input style="opacity: 1;" type="text" id="searchInput" placeholder="Search timezone (e.g. Europe/London)">
+            <div id="suggestions" style="opacity: 1;"></div>
+            </div>
+            </div>
+            <div id="result"></div>
+        </div>
+
+        <script src="{% static 'daily/clock.js'%}"></script>
+{% endblock body %}

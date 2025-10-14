@@ -1,0 +1,65 @@
+{% load static %}
+<html>
+    <head>
+        {% block head %}{% endblock head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DailyDash</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+         rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+        <link href="{% static 'daily/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand ne-auto" href="{% url 'index' %}">DailyDash</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">DailyDash</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{% url 'clock'%}">World Clock</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'weather'%}">Weather</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{% url 'news'%}">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{% url 'feedback_submit'%}">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://github.com/real0m4r">My Github</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </nav>
+        {% block body %}
+        {% endblock %}
+        <footer class="bg-dark py-5 mt-5">
+            <div class="container text-light text-center">
+                <p class="display-5 mb-3">DailyDash</p>
+            </div>
+        </footer>
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    </body>
+</html>

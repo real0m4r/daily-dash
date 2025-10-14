@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+:root {
+    --nav-height: 70px; /* adjust to match your navbar height (e.g. 56px for default Bootstrap) */
+}
+
+/* ensure page content sits below fixed navbar */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    /* keep the top padding for the fixed navbar, do NOT overwrite below */
+    padding-top: var(--nav-height);
+    min-height: 100vh;
+    background-color: #620de3;
+}
+
+/* center main content both vertically and horizontally */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* use height so centering is exact */
+    height: calc(100vh - var(--nav-height));
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+h1 {
+    font-size: 26px;
+    line-height: 32px;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: Montserrat;
+}
+
+.main-intro .text-content {
+    max-width: 900px;
+    width: 100%;
+}
+
+.main-intro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    color: #fff;
+
+}
+
+.main-intro img {
+    height: 60%;
+    order: 2; /* Move image to the right */
+}
+
+
+.main-intro h1 {
+    font-size: 65px;
+    line-height: 75px;
+    color: #fff;
+    margin: 0;
+    margin-left: 35%;
+}
+
+.main-intro p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+    max-width: 400px;
+    margin: 20px 0;
+    font-style:italic;
+    font-weight: 900;
+    margin-left: 45%;
+}
+
+.main-intro a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: orange;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-weight: 300;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    opacity: 0.5;
+}
+
+/* footer styles — force white text regardless of global rules */
+.site-footer {
+    background: #222;                     /* dark background */
+    padding: 18px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ensure all text inside footer is white and links are visible */
+.site-footer,
+.site-footer * {
+    color: #fff !important;
+}
+.site-footer a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+/* mobile spacing */
+@media (max-width: 600px) {
+    .site-footer { padding: 14px 8px; font-size: 13px; }
+    main {
+        flex-direction: column;
+        padding-top: 10px;
+        margin-bottom: 50%;
+        margin-top: 0;
+    }
+
+    .main-intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .main-intro img {
+        order: 1; /* Image on top in mobile view */
+        max-width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .main-intro .text-content {
+        order: 2; /* Text below image in mobile view */
+    }
+
+    .main-intro h1 {
+        font-size: 3rem;
+        line-height: 1.1;
+        margin: 0;
+    }
+
+    .main-intro p {
+        text-align: center;
+        padding: 0 20px;
+        margin-left: 0;
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 20px;
+    }
+
+    .main-intro a {
+        margin-left: 0;
+    }
+    .index-category {
+        padding: 40px 0 20px;
+        row-gap: 10px;
+    }
+
+    .index-category-box {
+        width: calc(100% - 20px);
+        height: 160px;
+    }
+}

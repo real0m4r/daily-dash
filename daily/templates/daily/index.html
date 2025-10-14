@@ -1,0 +1,24 @@
+{% extends 'daily/layout.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'daily/index.css' %}">
+{% endblock head %}
+{% block body %}
+    <main>
+        <div class="main-intro">
+            <div class="text-content" style="justify-content: center;">
+                <h1>Welcome to DailyDash!</h1>
+                <p>If you're looking for the ultimate all-in-one daily companion,
+                     then you've just landed in the perfect place! This is DailyDash,
+                      an app designed to keep you informed and on time, every single day.
+                       With DailyDash, you can check the latest weather updates,
+                        track the time across the globe with the world clock,
+                         and stay in the loop with real-time news. Whether you're planning your day
+                         , traveling abroad, or just curious about what’s happening around the world,
+                     DailyDash is your go-to dashboard for everything that matters.
+                </p>
+            </div>
+        </div>
+    </main>
+
+{% endblock body %}

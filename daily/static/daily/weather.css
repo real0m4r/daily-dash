@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: url(kind-and-curious-b4GePSx_Ofc-unsplash.jpg);
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(154, 154, 154, 0.650);
+    margin: 10% 10% 20% 10%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 80%;
+    opacity: 1;
+}
+
+.search-container {
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 55%;
+}
+
+input:hover {
+    font-size: larger;
+    transition-duration: 500ms;
+    transition: all;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    font-size: larger;
+    transition-duration: 500ms;
+    transition: all;
+}
+
+#weatherInfo {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: url(john-towner-JgOeRuGD_Y4-unsplash.jpg);
+        margin: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
