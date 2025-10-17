@@ -1,5 +1,7 @@
 # DailyDash
-
+---
+# Note the news may not function due to GNews' free plan restrictions, not the code's.
+---
 ## Overview
 **DailyDash** is a dynamic Django web application that brings together essential daily tools—**Weather**, **News**, and a **World Clock**—into one unified dashboard. Designed for convenience and simplicity, the site allows users to stay informed about global conditions, time zones, and top headlines without switching between multiple websites.
 
