@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
 from .models import Feedback
@@ -24,6 +24,8 @@ def feedback_submit(request):
             messages.error(request, "Message is required.")
             return render(request, "daily/feedback_form.html", {"name": name, "email": email, "message": message_text})
         Feedback.objects.create(name=name or None, email=email or None, message=message_text)
+        messages.success(request, "Thank you — your feedback has been received.")
+        return redirect("index")
     return render(request, "daily/feedback_form.html")
 
 
