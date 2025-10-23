@@ -6,130 +6,8 @@ body {
     border-radius: 0;
     font-family: Montserrat;
 }
-
-.header-main {
-    max-width: 100%;
-    height: 60px;
-    background-color: #24252A;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0 20px;
-    z-index: 2000;
-}
-.header-main-logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-.header-main-logo img {
-    height: 80px;
-}
-.header-main-logo:hover{
-    cursor: pointer;
-}
-.header-main-nav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    margin-right: 70px;
-}
-.header-main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-main-nav ul li {
-    margin: 0 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-main-nav ul li a {
-    padding: 0 10px;
-    font-family: "Montserrat", sans-serif;
-    line-height: 30px;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slash-nav {
-    color: #fff;
-}
-.header-main-nav ul li a:hover {
-    color: orange;
-    transition: color 500ms;
-}
-footer {
-    background-color: #000;
-    padding: 0;
-}
-.footer-container {
-    width: 100%;
-    padding: 70px 0px 20px;
-}
-.footerNav {
-    margin: 30px 0;
-}
-.footerNav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-}
-.footerNav ul li a {
-    color: white;
-    margin:  10px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-.footerNav ul li a:hover {
-    opacity: 1;
-    color: orange;
-}
-.footerBottom {
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-}
-.footerBottom p {
-    color: white;
-    opacity: 0.7;
-    font-size: 1.2em;
-}
-.designer {
-    opacity: 0.7;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin: 0px 5px;
-}
-.burger-menu-btn {
-    display: none;
-    background-image: url(burger-menu-open.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.burger-menu {
-    display: none;
-}
  :root {
   --bg: #f2f2f2;
-  --text: #111;
   --card: #fff;
   --accent: #cc0000;
   --border: #ddd;
@@ -204,7 +82,6 @@ header {
   flex: 1;
 }
 .news-content a {
-  color: var(--text);
   font-size: 1.2em;
   font-weight: bold;
   text-decoration: none;
@@ -240,85 +117,6 @@ header {
     z-index: 1000;
     display: flex;
 }
-@media only screen and (max-width: 600px) {
-    .burger-menu-btn {
-        display: block;
-        height: 50px;
-        width: 50px;
-        margin-left: 180px;
-    }
-
-    .burger-menu {
-        display: none;
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        z-index: 900;
-        background-color: #111;
-        list-style-type: none;
-    }
-    
-    .burger-menu ul {
-        width: 100%;
-        height: calc(100vh - 60px);
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        list-style-type: none;
-        text-align: center;
-        padding-left: 0;
-        padding-top: 30px;
-    }
-    .burger-menu ul li {
-        flex-basis: 100%;
-        border-top: 2px solid #000;
-        text-decoration: none;
-    }
-    .burger-menu ul li:last-child {
-        border-bottom: 2px solid #000;
-    }
-    .burger-menu ul li a {
-        height: 100%;
-        padding: 30px 0;
-        font-size: 2rem;
-        display: block;
-        flex-basis: 100%;
-        text-align: center;
-        list-style-type: none;
-        text-decoration: none;
-        color: #fff;
-    }
-    .header-main {
-        position: sticky;
-        top: 0;
-        z-index: 2000;
-    }
-
-    .header-main-logo {
-        padding-left: 20px;
-    }
-
-    .header-main-nav {
-        display: none;
-    }
-    .index-category {
-        padding: 40px 0 20px;
-        row-gap: 10px;
-    }
-    
-    .index-category-box {
-        width: calc(100% - 20px);
-        height: 160px;
-    }
-    .footerNav ul {
-        flex-direction: column;
-    }
-    .footerNav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 10px 0px;
-    }
-}
 @media (max-width: 700px) {
   .news-item {
     flex-direction: column;
@@ -327,4 +125,10 @@ header {
     width: 100%;
     height: auto;
   }
+}
+.news-content p {
+  color: black;
+}
+body.dark .news-content p {
+  color: white;
 }

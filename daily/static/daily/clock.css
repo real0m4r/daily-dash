@@ -15,11 +15,10 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     max-width: 80%;
     text-align: center;
-    margin-top: 150px;
-    margin-bottom: 300px;
+    margin-bottom: 400px;
     justify-content: center;
-    margin: 20% 10%;
-    margin-top: 15%;
+    margin: 0 10%;
+    margin-top: 0.5%;
     width: 100%;
     opacity: 0.7;
     color: #fff;
@@ -53,7 +52,7 @@ h1 {
 
 #suggestions {
   position: absolute;
-  top: 100%; /* below the input */
+  top: 100%;
   left: 0;
   width: 100%;
   background: white;
@@ -81,11 +80,13 @@ h1 {
     color: black;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
     .clock-container {
         width: 100%;
-        max-width: 390px;
-        margin: 80% 0%;
+        max-width: 100%;
+        margin: 0;
+        margin-top: 35%;
+        margin-bottom: auto;
     }
 
 
